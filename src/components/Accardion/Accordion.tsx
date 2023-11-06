@@ -2,14 +2,15 @@ import AccordionTitle from "./AccordionTitle";
 import AccordionBody from "./AccrodionBody";
 
 type AccordionPropsType = {
-  title: string
+  title: string,
+  collapsed: boolean
 }
 
 function Accordion(props: AccordionPropsType) {
   return (
     <>
       <AccordionTitle title={props.title} />
-      <AccordionBody />
+      { !props.collapsed && <AccordionBody /> }
     </>
   );
 }
