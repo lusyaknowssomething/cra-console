@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { MyAnimation } from "../styles/animations/animations";
+import { MyAnimation } from "./animations/animations";
 
 type StyledBtnPropsType = {
   color?: string,

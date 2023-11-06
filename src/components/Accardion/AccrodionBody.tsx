@@ -1,4 +1,4 @@
-import { Menu } from "../Menu.styled";
+import { Menu } from "../../styles/Menu.styled";
 
 function AccordionBody() {
   return (

@@ -2,8 +2,9 @@ import React from "react";
 import Accordion from "./components/Accardion/Accordion";
 import Rating from "./components/Rating/Rating";
 import styled from "styled-components";
-import { StyledBtn, SuperButton } from "./components/Button.styled";
-import { Link } from "./components/Link.styled";
+import { StyledBtn, SuperButton } from "./styles/Button.styled";
+import { Link } from "./styles/Link.styled";
+import { myTheme } from "./styles/Theme.styled";
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
       <StyledBtn as="a" href={"#"}>Link</StyledBtn>
       <SuperButton>Super Button</SuperButton>
       <StyledBtn as={Link}>Link Component</StyledBtn>
-      <StyledBtn btnType={'primary'}>Primary</StyledBtn>
-      <StyledBtn btnType={'outlined'}>Outline</StyledBtn>
+      <StyledBtn color={myTheme.colors.primary} btnType={'primary'}>Primary</StyledBtn>
+      <StyledBtn color={myTheme.colors.secondary} btnType={'outlined'}>Outline</StyledBtn>
     </Box>
     </>
   );
@@ -53,7 +54,7 @@ const Box = styled.div`
     cursor: zoom-in;
   }
 
-  @media screen and (max-width: 800px) {
+  @media ${myTheme.media.tablet} {
     background-color: #ffcc96
   }
 `
