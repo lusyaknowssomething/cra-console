@@ -1,21 +1,47 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { MyAnimation } from "../styles/animations/animations";
 
-export const StyledBtn = styled.button`
+type StyledBtnPropsType = {
+  color?: string,
+  fontSize?: string,
+  btnType?: 'primary' | 'outlined'
+}
+
+export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
-  background-color: #fb3f78;
+  //background-color: #fb3f78;
+  background-color: ${props => props.color || '#fb3f78'};
   padding: 10px 20px;
   color: snow;
-  font-size: 1rem;
+  font-size: ${props => props.fontSize || '1rem'};
   font-weight: bold;
 
   &:hover {
     background-color: #da3768;
   }
 
-  &:last-child {
-    background-color: #37dacf;
-  }
+  //outlined
+
+  ${props  => props.btnType === 'outlined' && css<StyledBtnPropsType>`
+    border: 2px solid ${props => props.color || '#fb3f78'};
+    color: ${props => props.color || '#fb3f78'};
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-color: #4053cc;
+      color: #4053cc;
+    }
+  `}
+
+  //primary
+  
+  ${props  => props.btnType ===  'primary' && css<StyledBtnPropsType>`
+    background-color: ${props => props.color || '#fb3f78'};
+    color: snow;
+  `}
+  
+
 `
 
 

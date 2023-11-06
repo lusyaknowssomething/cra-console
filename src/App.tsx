@@ -18,10 +18,13 @@ function App() {
       <Rating value={5} />
       <Accordion title={'Menu'} collapsed={true} />
       <Accordion title={'Users'} collapsed={false} />
+      <StyledBtn color={'green'} fontSize ={'20px'}>Button Green</StyledBtn>
       <StyledBtn>Button</StyledBtn>
       <StyledBtn as="a" href={"#"}>Link</StyledBtn>
       <SuperButton>Super Button</SuperButton>
       <StyledBtn as={Link}>Link Component</StyledBtn>
+      <StyledBtn btnType={'primary'}>Primary</StyledBtn>
+      <StyledBtn btnType={'outlined'}>Outline</StyledBtn>
     </Box>
     </>
   );
