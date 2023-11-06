@@ -1,10 +1,16 @@
+import { Menu } from "../Menu.styled";
+
 function AccordionBody() {
   return (
-    <ul>
-      <li>1</li>
+    <Menu>
+      <ul>
+      <li>
+        <a>1</a>
+      </li>
       <li>2</li>
       <li>3</li>
-    </ul>
+      </ul>
+    </Menu>
   );
 }
 
