@@ -1,52 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Accordion from "./components/Accardion/Accordion";
+import Rating from "./components/Rating/Rating";
 
 function App() {
-
-
   return (
     <div>
-      This is App component
-      <Rating/>
-      <Accordion/>
+      <PageTitle />
+      Article 1
+      <Rating value={1} />
+      Article 2
+      <Rating value={2} />
+      Article 3
+      <Rating value={3} />
+      Article 4
+      <Rating value={4} />
+      Article 5
+      <Rating value={5} />
+      <Accordion title={'Menu'} />
+      <Accordion title={'Users'} />
     </div>
   );
 }
 
-
-function Rating() {
-  return (
-    <>
-      <Star/>
-      <Star/>
-      <Star/>
-      <Star/>
-      <Star/>
-    </>
-  );
+function PageTitle() {
+  return <h1>This is App component</h1>;
 }
-
-function Accordion() {
-  return (
-    <>
-      <h3>start</h3>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </>
-  );
-}
-
-function Star() {
-  return (
-    <div>Star</div>
-  );
-}
-
-
 
 export default App;
